@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -13,59 +16,132 @@
       referrerpolicy="no-referrer"
     />
     <title>Expense Control</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav
-          class="navbar has-background-primary p-4"
-          role="navigation"
-          aria-label="main navigation"
-        >
-          <div class="navbar-brand">
-            <div class="navbar-item">
+      <nav
+        class="navbar has-background-primary p-4"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <a class="button is-primary">
+              <h1 class="title has-text-white is-size-2">
+                <i class="fa-solid fa-wallet p-2"></i>
+                Expense Control
+              </h1>
+            </a>
+
+            <a
+              role="button"
+              class="navbar-burger has-text-white"
+              aria-label="menu"
+              aria-expanded="false"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="navbar-menu"> -->
+        <div class="navbar-end navbar-menu">
+          <div class="navbar-item">
+            <div class="buttons">
               <a class="button is-primary">
-                <h1 class="title has-text-white is-size-2">
-                  <i class="fa-solid fa-wallet p-2"></i>
-                  Expense Control
-                </h1>
+                <i class="fa-solid fa-arrow-trend-up pr-2"></i>
+                Balance
               </a>
-  
-              <a
-                role="button"
-                class="navbar-burger has-text-white"
-                aria-label="menu"
-                aria-expanded="false"
-              >
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+
+              <a class="button is-primary">
+                <i class="fa-solid fa-tag pr-2"></i>
+                Categories
+              </a>
+
+              <a class="button is-primary">
+                <i class="fa-solid fa-chart-pie pr-2"></i>
+                Reports
               </a>
             </div>
           </div>
-          <!-- <div class="navbar-menu"> -->
-          <div class="navbar-end navbar-menu">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <i class="fa-solid fa-arrow-trend-up pr-2"></i>
-                  Balance
-                </a>
-  
-                <a class="button is-primary">
-                  <i class="fa-solid fa-tag pr-2"></i>
-                  Categories
-                </a>
-  
-                <a class="button is-primary">
-                  <i class="fa-solid fa-chart-pie pr-2"></i>
-                  Reports
-                </a>
-              </div>
+        </div>
+        <!-- </div> -->
+      </nav>
+    </header>
+
+    <main>
+      <section id="balance" class="columns is-flex p-6 has-background-white-bis">
+        <div class="column is-3 is-offset-1 pt-0 pb-0">
+            <div class="box">
+                <h2 class= "title is-2">Balance</h2>
+                <p>Gain <span>+$0</span></p>
+                <p>Spend <span>-$0</span></p>
+                <h4>Total <span>$0</span></h4>
             </div>
-          </div>
-          <!-- </div> -->
-        </nav>
-      </header>
-    
-</body>
+
+            <div class="box">
+
+                <div>
+                <h3 class= "title is-3">Filters</h3>
+                <button>Hide Filters</button>
+                </div>
+
+                <p>Type</p>
+                <div class="select">
+                <select>
+                <option>all</option>
+                <option>Spend</option>
+                <option>Gain</option>
+                </select>
+                </div>
+
+                <p>Category</p>
+                <div class="select">
+              <select>
+                <option>all</option>
+                <option>Food</option>
+                <option>Essential services</option>
+                <option>Outgoing</option>
+                <option>Education</option>
+                <option>Transport</option>
+                <option>Job</option>
+              </select>
+                </div>
+
+                <p>Since</p>
+                <div>
+              <input type="date" value="2022-12-13" />
+                </div>
+
+                 <p>Sort by</p>
+                <div class="select">
+              <select>
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>Higher amount</option>
+                <option>Lower amount</option>
+                <option>A to Z</option>
+                <option>Z to A</option>
+              </select>
+                </div>
+          
+            </div>
+        </div>
+        <div class="box column is-7">
+            <div>
+            <h3 class= "title is-3">Operations</h3>
+            <button>
+                + New Oparation
+            </button>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+            <p>No results</p>
+            <p>Change filters or add operations</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
