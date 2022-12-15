@@ -71,7 +71,10 @@
     </header>
 
     <main>
+
+        <!-- Balance section -->
       <section id="balance" class="columns is-flex p-6 has-background-white-bis">
+        <!-- Balance result content -->
         <div class="column is-3 is-offset-1 pt-0 pb-0">
             <div class="box">
                 <h2 class= "title is-2">Balance</h2>
@@ -79,14 +82,13 @@
                 <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Spend <span class="has-text-danger">-$0</span></p>
                 <h4 class="is-flex is-justify-content-space-between title is-4">Total <span class="has-text-weight-semibold">$0</span></h4>
             </div>
-
+            <!-- Balance Filters -->
             <div class="box">
-
                 <div class="is-flex is-justify-content-space-between">
                 <h3 class= "title is-3">Filters</h3>
                 <button class="button is-info is-inverted">Hide Filters</button>
                 </div>
-
+                  <!-- type -->
                 <p class="label">Type</p>
                 <div class="select mb-3 is-fullwidth">
                 <select class="">
@@ -95,7 +97,7 @@
                 <option>Gain</option>
                 </select>
                 </div>
-
+                  <!-- Category -->
                 <p class="label">Category</p>
                 <div class="select mb-3 is-fullwidth">
               <select>
@@ -108,13 +110,12 @@
                 <option>Job</option>
               </select>
                 </div>
-
-                
+                  <!-- Date -->
                 <div>
                 <label class="label" for="filter-date">Date</label>
                 <input class="input is-fullwidth" type="date" value="" />
                 </div>
-
+                  <!-- Sort by -->
                  <p class="label mt-3">Sort by</p>
                 <div class="select is-fullwidth">
               <select>
@@ -125,23 +126,43 @@
                 <option>A to Z</option>
                 <option>Z to A</option>
               </select>
-                </div>
-          
+                </div>          
             </div>
+            <!-- End balance filters -->
         </div>
-        <div class="box column is-7">
+          <!-- End balance result content -->
+
+          <!-- Operations content -->
+          <div class="box column is-7">
+
             <div class="is-flex is-justify-content-space-between p-3">
-            <h3 class= "title is-3">Operations</h3>
-            <button class="button is-primary">
+              <h3 class= "title is-3">Operations</h3>
+              <button class="button is-primary">
                 + New Oparation
-            </button>
+              </button>
             </div>
-            <div class="is-flex is-justify-content-center">
-                <img src="images/balanceImg.png" alt="">
+            <!-- no operation image-->
+            <div class="is-flex is-flex-direction-column is-align-items-center">
+                <img src="images/balanceImg.png" alt="" width="400" height="500">
+                <p class="subtitle is-5 has-text-weight-semibold has-text-centered">No results</p>
+                <p class="subtitle is-6 has-text-weight-semibold has-text-centered">Change filters or add operations</p>
             </div>
-            <p class="subtitle is-5 has-text-weight-semibold has-text-centered">No results</p>
-            <p class="subtitle is-5 has-text-weight-semibold has-text-centered">Change filters or add operations</p>
-        </div>
+        
+            <!-- hidden operation table -->
+            <div class="pt-5">
+              <table class="table is-hoverable is-fullwidth">
+                <thead class="is-hidden">
+                  <tr>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
       </section>
     </main>
   </body>
