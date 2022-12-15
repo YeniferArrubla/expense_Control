@@ -75,31 +75,31 @@
         <div class="column is-3 is-offset-1 pt-0 pb-0">
             <div class="box">
                 <h2 class= "title is-2">Balance</h2>
-                <p>Gain <span>+$0</span></p>
-                <p>Spend <span>-$0</span></p>
-                <h4>Total <span>$0</span></h4>
+                <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Gain <span class="has-text-success">+$0</span></p>
+                <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Spend <span class="has-text-danger">-$0</span></p>
+                <h4 class="is-flex is-justify-content-space-between title is-4">Total <span class="has-text-weight-semibold">$0</span></h4>
             </div>
 
             <div class="box">
 
-                <div>
+                <div class="is-flex is-justify-content-space-between">
                 <h3 class= "title is-3">Filters</h3>
-                <button>Hide Filters</button>
+                <button class="button is-info is-inverted">Hide Filters</button>
                 </div>
 
-                <p>Type</p>
-                <div class="select">
-                <select>
-                <option>all</option>
+                <p class="label">Type</p>
+                <div class="select mb-3 is-fullwidth">
+                <select class="">
+                <option>All</option>
                 <option>Spend</option>
                 <option>Gain</option>
                 </select>
                 </div>
 
-                <p>Category</p>
-                <div class="select">
+                <p class="label">Category</p>
+                <div class="select mb-3 is-fullwidth">
               <select>
-                <option>all</option>
+                <option>All</option>
                 <option>Food</option>
                 <option>Essential services</option>
                 <option>Outgoing</option>
@@ -109,13 +109,14 @@
               </select>
                 </div>
 
-                <p>Since</p>
+                
                 <div>
-              <input type="date" value="2022-12-13" />
+                <label class="label" for="filter-date">Date</label>
+                <input class="input is-fullwidth" type="date" value="" />
                 </div>
 
-                 <p>Sort by</p>
-                <div class="select">
+                 <p class="label mt-3">Sort by</p>
+                <div class="select is-fullwidth">
               <select>
                 <option>Newest</option>
                 <option>Oldest</option>
@@ -129,17 +130,17 @@
             </div>
         </div>
         <div class="box column is-7">
-            <div>
+            <div class="is-flex is-justify-content-space-between p-3">
             <h3 class= "title is-3">Operations</h3>
-            <button>
+            <button class="button is-primary">
                 + New Oparation
             </button>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="is-flex is-justify-content-center">
+                <img src="images/balanceImg.png" alt="">
             </div>
-            <p>No results</p>
-            <p>Change filters or add operations</p>
+            <p class="subtitle is-5 has-text-weight-semibold has-text-centered">No results</p>
+            <p class="subtitle is-5 has-text-weight-semibold has-text-centered">Change filters or add operations</p>
         </div>
       </section>
     </main>
