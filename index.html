@@ -70,26 +70,27 @@
       </nav>
     </header>
 
-    <main>
+    <main class="has-background-white-bis">
 
         <!-- Balance section -->
-      <section id="balance" class="columns is-flex p-6 has-background-white-bis">
+      <section id="balance" class="container">
+        <div class="columns p-4">
         <!-- Balance result content -->
-        <div class="column is-3 is-offset-1 pt-0 pb-0">
+          <div class="column is-3 is-offset-1 mb-4">
             <div class="box">
-                <h2 class= "title is-2">Balance</h2>
+                <h2 class= "title is-3">Balance</h2>
                 <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Gain <span class="has-text-success">+$0</span></p>
                 <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Spend <span class="has-text-danger">-$0</span></p>
                 <h4 class="is-flex is-justify-content-space-between title is-4">Total <span class="has-text-weight-semibold">$0</span></h4>
             </div>
             <!-- Balance Filters -->
             <div class="box">
-                <div class="is-flex is-justify-content-space-between">
-                <h3 class= "title is-3">Filters</h3>
+                <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
+                <h3 class= "title is-4">Filters</h3>
                 <button class="button is-info is-inverted">Hide Filters</button>
                 </div>
                   <!-- type -->
-                <p class="label">Type</p>
+                <p class="label pt-4">Type</p>
                 <div class="select mb-3 is-fullwidth">
                 <select class="">
                 <option>All</option>
@@ -129,15 +130,15 @@
                 </div>          
             </div>
             <!-- End balance filters -->
-        </div>
+          </div>
           <!-- End balance result content -->
 
           <!-- Operations content -->
-          <div class="box column is-7">
+          <div class="box column is-7 mt-3">
 
-            <div class="is-flex is-justify-content-space-between p-3">
-              <h3 class= "title is-3">Operations</h3>
-              <button class="button is-primary">
+            <div class="is-flex is-justify-content-space-between p-4">
+              <h3 class= "title is-4">Operations</h3>
+              <button class="button is-primary is-focused">
                 + New Oparation
               </button>
             </div>
@@ -163,6 +164,7 @@
               </table>
             </div>
           </div>
+        </div>
       </section>
     </main>
   </body>
