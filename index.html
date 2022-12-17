@@ -26,14 +26,15 @@
       >
         <div class="navbar-brand">
           <div class="navbar-item">
-            <a class="button is-primary">
+            <a class="button is-primary" href="#balanceLink">
               <h1 class="title has-text-white is-size-2">
                 <i class="fa-solid fa-wallet p-2"></i>
                 Expense Control
               </h1>
             </a>
-
+            <!-- navbar-burger -->
             <a
+              id="navBurger"
               role="button"
               class="navbar-burger has-text-white"
               aria-label="menu"
@@ -45,28 +46,27 @@
             </a>
           </div>
         </div>
-        <!-- <div class="navbar-menu"> -->
-        <div class="navbar-end navbar-menu">
-          <div class="navbar-item">
+        <!-- navbar -->
+        <div class="navbar-menu navbar-end">
+          <div id="navLinks" class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
+              <a id="balanceLink" class="button is-primary">
                 <i class="fa-solid fa-arrow-trend-up pr-2"></i>
                 Balance
               </a>
 
-              <a class="button is-primary">
+              <a id="categoriesLink" class="button is-primary">
                 <i class="fa-solid fa-tag pr-2"></i>
                 Categories
               </a>
 
-              <a class="button is-primary">
+              <a id="reportsLink" class="button is-primary">
                 <i class="fa-solid fa-chart-pie pr-2"></i>
                 Reports
               </a>
             </div>
           </div>
         </div>
-        <!-- </div> -->
       </nav>
     </header>
 
@@ -79,55 +79,57 @@
           <div class="column is-3 is-offset-1 mb-4">
             <div class="box">
                 <h2 class= "title is-3">Balance</h2>
-                <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Gain <span class="has-text-success">+$0</span></p>
-                <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Spend <span class="has-text-danger">-$0</span></p>
-                <h4 class="is-flex is-justify-content-space-between title is-4">Total <span class="has-text-weight-semibold">$0</span></h4>
+                <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Income <span id="gainBalance" class="has-text-success">+$0</span></p>
+                <p class="is-size-5 is-flex is-justify-content-space-between pb-4">Spend <span id="spendBalance" class="has-text-danger">-$0</span></p>
+                <h4 class="is-flex is-justify-content-space-between title is-4">Total <span id="totalBalance" class="has-text-weight-semibold">$0</span></h4>
             </div>
             <!-- Balance Filters -->
             <div class="box">
                 <div class="is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                <h3 class= "title is-4">Filters</h3>
-                <button class="button is-info is-inverted">Hide Filters</button>
+                  <h3 class= "title is-4">Filters</h3>
+                  <button id="btnHideFilters" class="button is-info is-inverted">Hide Filters</button>
                 </div>
+                <div id="filterContainer">
                   <!-- type -->
-                <p class="label pt-4">Type</p>
-                <div class="select mb-3 is-fullwidth">
-                <select class="">
-                <option>All</option>
-                <option>Spend</option>
-                <option>Gain</option>
-                </select>
-                </div>
+                  <p class="label pt-4">Type</p>
+                  <div class="select mb-3 is-fullwidth">
+                    <select id="typeSelec">
+                      <option value="all" >All</option>
+                      <option value="income" >Income</option>
+                      <option value="spend" >Spend</option>
+                    </select>
+                  </div>
                   <!-- Category -->
-                <p class="label">Category</p>
-                <div class="select mb-3 is-fullwidth">
-              <select>
-                <option>All</option>
-                <option>Food</option>
-                <option>Essential services</option>
-                <option>Outgoing</option>
-                <option>Education</option>
-                <option>Transport</option>
-                <option>Job</option>
-              </select>
-                </div>
+                  <p class="label">Category</p>
+                  <div class="select mb-3 is-fullwidth">
+                    <select id="categorySelect" >
+                      <option value="all" >All</option>
+                      <option value="food" >Food</option>
+                      <option value="eServices" >Essential services</option>
+                      <option value="gOut" >Going out</option>
+                      <option value="education" >Education</option>
+                      <option value="transport" >Transport</option>
+                      <option value="job" >Job</option>
+                    </select>
+                  </div>
                   <!-- Date -->
-                <div>
-                <label class="label" for="filter-date">Date</label>
-                <input class="input is-fullwidth" type="date" value="" />
-                </div>
+                  <div>
+                    <label class="label" for="filterDate">Date</label>
+                    <input id="filterDate" class="input is-fullwidth" type="date" value="" />
+                  </div>
                   <!-- Sort by -->
-                 <p class="label mt-3">Sort by</p>
-                <div class="select is-fullwidth">
-              <select>
-                <option>Newest</option>
-                <option>Oldest</option>
-                <option>Higher amount</option>
-                <option>Lower amount</option>
-                <option>A to Z</option>
-                <option>Z to A</option>
-              </select>
-                </div>          
+                  <p class="label mt-3">Sort by</p>
+                  <div class="select is-fullwidth">
+                    <select id="sortBySelect">
+                      <option value="newst" >Newest</option>
+                      <option value="oldest" >Oldest</option>
+                      <option value="higherAmount" >Higher amount</option>
+                      <option value="lowerAmount" >Lower amount</option>
+                      <option value="aZ" >A to Z</option>
+                      <option value="zA" >Z to A</option>
+                    </select>
+                  </div>          
+                </div>
             </div>
             <!-- End balance filters -->
           </div>
@@ -138,21 +140,21 @@
 
             <div class="is-flex is-justify-content-space-between p-4">
               <h3 class= "title is-4">Operations</h3>
-              <button class="button is-primary is-focused">
+              <button id="newOperation" class="button is-primary is-focused">
                 + New Oparation
               </button>
             </div>
             <!-- no operation image-->
-            <div class="is-flex is-flex-direction-column is-align-items-center">
+            <div id="noOperationContainer" class="is-flex is-flex-direction-column is-align-items-center">
                 <img src="images/balanceImg.png" alt="" width="400" height="500">
                 <p class="subtitle is-5 has-text-weight-semibold has-text-centered">No results</p>
                 <p class="subtitle is-6 has-text-weight-semibold has-text-centered">Change filters or add operations</p>
             </div>
         
             <!-- hidden operation table -->
-            <div class="pt-5">
+            <div id="operationsTable" class="pt-5 is-hidden">
               <table class="table is-hoverable is-fullwidth">
-                <thead class="is-hidden">
+                <thead id="tHeadTag">
                   <tr>
                     <th>Description</th>
                     <th>Category</th>
@@ -161,6 +163,9 @@
                     <th>Actions</th>
                   </tr>
                 </thead>
+                <tbody id="tBodyOperations">
+                  
+                </tbody>
               </table>
             </div>
           </div>
