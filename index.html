@@ -172,8 +172,73 @@
         </div>
       </section>
       <!-- Categories Section -->
-      <section id="categories">
+      <section id="categoriesSection" class="container">
+        <div class="columns p-5">
+          <div class="box column is-8 is-offset-2 p-4">
+            <div>
+              <h2 class="title is-size-3 has-text-weight-bold">Categories</h2>
+              <label class="label" for="newCategoryName">Name</label>
+              <div class="field is-grouped">
+              <p class="control is-expanded">
+              <input value="" class="input" type="text" placeholder="Write new category">
+              </p>
+              <p class="control">
+              <button id="addCategory" class="button is-primary">
+                Add
+              </button>
+              </p>
+              </div>
+            </div>
+            <div class="editCategoriesContainer pt-5">
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tag is-primary is-light is-size-6 mt-3">Food</td>
+                    <td>
+                      <button class="button is-success is-outlined">
+                          <span class="icon is-small">
+                          <i class="fa-solid fa-pencil"></i>
+                        </span>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="button is-danger is-outlined">
+                          <span class="icon is-small">
+                          <i class="fas fa-times"></i>
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tag is-primary is-light is-size-6 mt-3">Essential services</td>
+                    <td>
+                      <button class="button is-success is-outlined">
+                          <span class="icon is-small">
+                          <i class="fa-solid fa-pencil"></i>
+                        </span>
+                      </button>
+                    </td>
+                    <td>
+                      <button class="button is-danger is-outlined">
+                          <span class="icon is-small">
+                          <i class="fas fa-times"></i>
+                        </span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
 
+              </table>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </body>
