@@ -232,6 +232,69 @@
             </div>
           </div>
         </div>
+
+        <!-- Edit Operation view -->
+        <div class="container p-5">
+          <div class="columns">
+            <div class="box column is-8 is-offset-2 p-5">
+              <h2 class="title is-size-3 has-text-weight-bold">Edit Operation</h2>
+              <div class="field">
+                <label class="label">Description</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Describe the activity">
+                </div>
+              </div>
+            
+              <div class="field">
+                <label class="label">Amount</label>
+                <div class="control">
+                  <input class="input" type="number" placeholder="" value="">
+                </div>
+              </div>
+                                  
+              <div class="field">
+                <label class="label">Type</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Income</option>
+                      <option>Spend</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Category</label>
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Food</option>
+                      <option>Essential services</option>
+                      <option>Going out</option>
+                      <option>Education</option>
+                      <option>Transport</option>
+                      <option>Job</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            
+              <div>
+                <label class="label" for="filterDate">Date</label>
+                <input id="filterDate" class="input is-fullwidth" type="date" value="" />
+              </div>
+            
+              <div class="field pt-4">
+                <div class="control buttons has-addons is-right">
+                  <button class="button is-primary px-5">Edit</button>                            
+                  <button class="button is-danger">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </section>
     </main>
   </body>
