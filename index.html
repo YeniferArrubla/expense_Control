@@ -472,15 +472,15 @@
             <div class="p-5">
               <h2 class="title is-size-3 has-text-weight-bold">Reports</h2>
             </div>
-            <!-- No Reports -->
-            <div id="noReportContainer" class="is-flex is-flex-direction-column is-align-items-center">
+            <!-- No Report Info -->
+            <div id="noReportInfo" class="is-flex is-flex-direction-column is-align-items-center">
               <img src="/images/reportsImg.jpg" alt="reports graphic image" width="600">
               <p class="subtitle is-size-5 has-text-weight-semibold pt-5">Reports is available from three operations ahead</p>
               <p>Try adding more operations</p>
             </div>
 
-            <!-- Reports Operation Table -->
-            <div class="p-5">
+            <!-- Reports Operation Tables -->
+            <div id="reportTables" class="p-5">
               <h3 class="title is-4 has-text-weight-semibold pl-3">Summary</h3>
               <table class="table is-fullwidth">
                 <thead>
@@ -493,27 +493,27 @@
                 <tbody>
                   <tr>
                     <td>Category with highest income</td>
-                    <td class="has-text-centered"></td>
+                    <td id="highestIncome" class="has-text-centered"></td>
                     <td class="has-text-right"><span id=""  class="has-text-primary has-text-weight-semibold"></span></td>
                   </tr>
                   <tr>
                     <td>Category with highest spend</td>
-                    <td class="has-text-centered"></td>
+                    <td id="highestSpend" class="has-text-centered"></td>
                     <td class="has-text-right"><span id="" class="has-text-danger has-text-weight-semibold"></span></td>
                   </tr>
                   <tr>
                     <td>Category with highest balance</td>
-                    <td class="has-text-centered"></td>
+                    <td id="highestBalance" class="has-text-centered"></td>
                     <td class="has-text-right"><span id="" class="has-text-weight-semibold"></span></td>
                   </tr>
                   <tr>
                     <td>Month with highest income</td>
-                    <td class="has-text-centered"></td>
+                    <td id="monthHIncome" class="has-text-centered"></td>
                     <td class="has-text-right"><span id="" class="has-text-primary has-text-weight-semibold"></span></td>
                   </tr>
                   <tr>
                     <td>Month with highest spend</td>
-                    <td class="has-text-centered"></td>
+                    <td id="monthHSpend" class="has-text-centered"></td>
                     <td class="has-text-right"><span id="" class="has-text-danger has-text-weight-semibold"></span></td>
                   </tr>
                 </tbody>
@@ -535,7 +535,7 @@
                     <th class="has-text-centered">Balance</th>
                   </tr>
                 </thead>
-                <tbody id="">
+                <tbody id="totalCategoryInfo">
                   <!-- report total by category table with js -->
                 </tbody>
                 <tfoot>
@@ -557,7 +557,7 @@
                     <th class="has-text-centered">Balance</th>
                   </tr>
                 </thead>
-                <tbody id="">
+                <tbody id="totalMonthInfo">
                   <!-- report total by month table with js -->
                 </tbody>
                 <tfoot>
