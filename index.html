@@ -466,11 +466,109 @@
       </section>
 
       <!-- Reports Section -->
-      <section class="container">
+      <section class="container pb-5">
         <div class="columns">
           <div class="box column is-8 is-offset-2">
             <div class="p-5">
-              <h3 class="title is-size-3 has-text-weight-bold">Reports</h3>
+              <h2 class="title is-size-3 has-text-weight-bold">Reports</h2>
+            </div>
+            <!-- No Reports -->
+            <div id="noReportContainer" class="is-flex is-flex-direction-column is-align-items-center">
+              <img src="/images/reportsImg.jpg" alt="reports graphic image" width="600">
+              <p class="subtitle is-size-5 has-text-weight-semibold pt-5">Reports is available from three operations ahead</p>
+              <p>Try adding more operations</p>
+            </div>
+
+            <!-- Reports Operation Table -->
+            <div class="p-5">
+              <h3 class="title is-4 has-text-weight-semibold pl-3">Summary</h3>
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th class="has-text-centered">Tag</th>
+                    <th class="has-text-right">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Category with highest income</td>
+                    <td class="has-text-centered"></td>
+                    <td class="has-text-right"><span id=""  class="has-text-primary has-text-weight-semibold"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Category with highest spend</td>
+                    <td class="has-text-centered"></td>
+                    <td class="has-text-right"><span id="" class="has-text-danger has-text-weight-semibold"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Category with highest balance</td>
+                    <td class="has-text-centered"></td>
+                    <td class="has-text-right"><span id="" class="has-text-weight-semibold"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Month with highest income</td>
+                    <td class="has-text-centered"></td>
+                    <td class="has-text-right"><span id="" class="has-text-primary has-text-weight-semibold"></span></td>
+                  </tr>
+                  <tr>
+                    <td>Month with highest spend</td>
+                    <td class="has-text-centered"></td>
+                    <td class="has-text-right"><span id="" class="has-text-danger has-text-weight-semibold"></span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+              </table>
+              <h3 class="title is-4 has-text-weight-semibold pl-3">Total by Category</h3>
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th class="has-text-centered">Income</th>
+                    <th class="has-text-centered">Spend</th>
+                    <th class="has-text-centered">Balance</th>
+                  </tr>
+                </thead>
+                <tbody id="">
+                  <!-- report total by category table with js -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+              </table>
+              <h3 class="title is-4 has-text-weight-semibold pl-3">Total by Month</h3>
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th class="has-text-centered">Income</th>
+                    <th class="has-text-centered">Spend</th>
+                    <th class="has-text-centered">Balance</th>
+                  </tr>
+                </thead>
+                <tbody id="">
+                  <!-- report total by month table with js -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
           </div>
         </div>
