@@ -20,51 +20,45 @@
   <body>
     <header>
       <nav
-        class="navbar has-background-primary p-4"
+        class="navbar is-primary p-4"
         role="navigation"
         aria-label="main navigation"
       >
-        <div class="navbar-brand">
-          <div class="navbar-item">
-            <a class="button is-primary" href="#balanceLink">
-              <h1 class="title has-text-white is-size-2">
-                <i class="fa-solid fa-wallet p-2"></i>
-                Expense Control
-              </h1>
-            </a>
+        <div class="navbar-brand">          
+          <a class="button is-primary navbar-item" href="#balanceLink">
+            <h1 class="title has-text-white is-size-2">
+              <i class="fa-solid fa-wallet p-2"></i>
+              Expense Control
+            </h1>
+          </a>
             <!-- navbar-burger -->
-            <a
-              id="navBurger"
-              role="button"
-              class="navbar-burger has-text-white"
-              aria-label="menu"
-              aria-expanded="false"
-            >
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          </div>
+          <a
+            id="navBurger"
+            role="button"
+            class="navbar-burger has-text-white"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
         <!-- navbar -->
-        <div class="navbar-menu navbar-end">
-          <div id="navLinks" class="navbar-item">
-            <div class="buttons">
-              <a id="balanceLink" class="button is-primary">
-                <i class="fa-solid fa-arrow-trend-up pr-2"></i>
-                Balance
-              </a>
-
-              <a id="categoriesLink" class="button is-primary">
-                <i class="fa-solid fa-tag pr-2"></i>
-                Categories
-              </a>
-
-              <a id="reportsLink" class="button is-primary">
-                <i class="fa-solid fa-chart-pie pr-2"></i>
-                Reports
-              </a>
-            </div>
+        <div class="navbar-menu has-background-primary">
+          <div id="navLinks" class="navbar-end has-background-primary">            
+            <a id="balanceLink" class="button is-primary navbar-item has-text-left">
+              <i class="fa-solid fa-arrow-trend-up pr-2"></i>
+              Balance
+            </a>
+            <a id="categoriesLink" class="button is-primary navbar-item has-text-left">
+              <i class="fa-solid fa-tag pr-2"></i>
+              Categories
+            </a>
+            <a id="reportsLink" class="button is-primary navbar-item has-text-left">
+              <i class="fa-solid fa-chart-pie pr-2"></i>
+              Reports
+            </a>            
           </div>
         </div>
       </nav>
