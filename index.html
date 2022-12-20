@@ -171,6 +171,7 @@
           </div>
         </div>
       </section>
+
       <!-- Categories Section -->
       <section id="categoriesSection" class="container">
         <div class="columns p-5">
@@ -202,14 +203,14 @@
                   <tr>
                     <td class="is-size-6 mt-3">Food</td>
                     <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small">
+                      <button class="button is-success is-outlined icon is-small btnEditCategory">
                           <span class="icon is-small">
                           <i class="fa-solid fa-pencil"></i>
                         </span>
                       </button>
                     </td>
                     <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small">
+                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
                           <span class="icon is-small">
                           <i class="fas fa-times"></i>
                         </span>
@@ -220,14 +221,14 @@
                   <tr>
                     <td class="is-size-6 mt-3">Essential services</td>
                     <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small">
+                      <button class="button is-success is-outlined icon is-small btnEditCategory">
                           <span class="icon is-small">
                           <i class="fa-solid fa-pencil"></i>
                         </span>
                       </button>
                     </td>
                     <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small">
+                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
                           <span class="icon is-small">
                           <i class="fas fa-times"></i>
                         </span>
@@ -238,14 +239,14 @@
                   <tr>
                     <td class="is-size-6 mt-3">Going out</td>
                     <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small">
+                      <button class="button is-success is-outlined icon is-small btnEditCategory">
                           <span class="icon is-small">
                           <i class="fa-solid fa-pencil"></i>
                         </span>
                       </button>
                     </td>
                     <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small">
+                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
                           <span class="icon is-small">
                           <i class="fas fa-times"></i>
                         </span>
@@ -256,14 +257,14 @@
                   <tr>
                     <td class="is-size-6 mt-3">Education</td>
                     <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small">
+                      <button class="button is-success is-outlined icon is-small btnEditCategory">
                           <span class="icon is-small">
                           <i class="fa-solid fa-pencil"></i>
                           </span>
                       </button>
                     </td>
                     <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small">
+                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
                           <span class="icon is-small">
                           <i class="fas fa-times"></i>
                         </span>
@@ -274,14 +275,14 @@
                   <tr>
                     <td class="is-size-6 mt-3">Transport</td>
                     <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small">
+                      <button class="button is-success is-outlined icon is-small btnEditCategory">
                         <span class="icon is-small">
                         <i class="fa-solid fa-pencil"></i>
                         </span>
                       </button>
                     </td>
                     <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small">
+                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
                         <span class="icon is-small">
                         <i class="fas fa-times"></i>
                         </span>
@@ -292,14 +293,14 @@
                   <tr>
                     <td class="is-size-6 mt-3">Job</td>
                     <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small">
+                      <button class="button is-success is-outlined icon is-small btnEditCategory">
                         <span class="icon is-small">
                         <i class="fa-solid fa-pencil"></i>
                         </span>
                       </button>                    
                     </td>
                     <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small">
+                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
                         <span class="icon is-small">
                         <i class="fas fa-times"></i>
                         </span>
@@ -315,7 +316,7 @@
           </div>
         </div>
 
-        <div class="modal is-hidden columns p-5">
+        <div id="modalEditCategory" class="modal is-hidden columns p-5">
           <div class="modal-background"></div>
           <div class="modal-content box p-4">
             <div class="px-5">
@@ -326,10 +327,10 @@
                   <input value="" class="input" type="text" placeholder="Write new category name">
                 </p>
                 <div class="buttons has-addons is-right pt-4">
-                  <button class="button is-danger">
+                  <button id="btnCancelEditCategory" class="button is-danger">
                     Cancel
                   </button>
-                 <button class="button is-primary px-5">
+                 <button id="btnEditCategory" class="button is-primary px-5">
                     Edit
                   </button>
                 </div>
