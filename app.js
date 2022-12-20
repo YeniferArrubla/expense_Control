@@ -1,2 +1,3 @@
-const $ = document.querySelector(selector);
-const $$ = document.querySelectorAll(selector);
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => document.querySelectorAll(selector);
+
