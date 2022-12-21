@@ -49,3 +49,47 @@ $btnCategories.addEventListener('click', openCategorySec);
 $btnReports.addEventListener('click', openReportSec);
 
 $btnBalance.addEventListener('click', openBalanceSec);
+
+/* Balance view */
+
+/* Get Elements */
+const $filCont = $('#filterContainer');
+const $newOpCont = $('#newOperationC');
+const $noOpImg = $('#noOperationContainer');
+const $opTable =  $('#operationsTable');
+const $tableBodyOp = $('#tBodyOperations');
+const $editOp = $('#editOperation');
+
+
+/* btn */
+const $btnHideFil = $('#btnHideFilters');
+const $btnNewOp = $('#newOperation');
+const $btnCloseModalNewOp = $('#closeModalNewOp');
+const $btnAddOp = $('#addOperation');
+const $btnCancelAddOp = $('#addOperation');
+const $btnConfEditOp = $('#confirmEditOperation');
+const $btnCancelEditOp = $('#cancelEditOperation');
+
+/* Functions */
+
+const hideFilters = () =>{
+    $filCont.classList.toggle('is-hidden')
+    if($filCont.classList.contains('is-hidden')){
+        $btnHideFil.innerText = 'Open Filters'
+    }else{
+        $btnHideFil.innerText = 'Hide Filters'
+    }
+}
+
+const openNewOp = () => {
+   $newOpCont.classList.add('is-active')
+}
+
+const closeModalNop = () => {
+    $newOpCont.classList.remove('is-active')
+}
+/* Events */
+
+$btnHideFil.addEventListener('click', hideFilters);
+$btnNewOp.addEventListener('click', openNewOp);
+$btnCloseModalNewOp.addEventListener('click', closeModalNop);
