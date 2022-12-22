@@ -93,3 +93,71 @@ const closeModalNop = () => {
 $btnHideFil.addEventListener('click', hideFilters);
 $btnNewOp.addEventListener('click', openNewOp);
 $btnCloseModalNewOp.addEventListener('click', closeModalNop);
+
+/* Categories Section */
+let body = document.body;
+/* Get Elements */
+const $inpNewCategory = $('#inpNewCategory');
+const $tBodyNewCategory = $('#tBodyNewCategory');
+/* Btns */
+const $btnAddCategory = $('#addCategory');
+const $btnEditCategory = $$('.btnEditCategory');
+const $btnDeleteCategory = $$('.btnDeleteCategory');
+
+/* Array */
+
+const categoryArr = [
+    {
+        id:1,
+        category: 'Food'
+    },
+    {
+        id:2,
+        category: 'Essential services'
+    },
+    {
+        id:3,
+        category: 'Going out'
+    },
+    {
+        id:4,
+        category: 'Education'
+    },
+    {
+        id:5,
+        category: 'Transport'
+    },
+    {
+        id:6,
+        category: 'Job'
+    }
+];
+
+const addCategory = (categoryArr) =>{
+    for(let category of categoryArr) {
+        $tBodyNewCategory.innerHTML += `
+        <tr>
+        <td class="is-size-6 mt-3">${category.category}</td>
+        <td class="has-text-centered">
+            <button id=${category.id} class="button is-success is-outlined icon is-small btnEditCategory">
+            <i class="fa-solid fa-pencil"></i>
+            </button>
+        </td>
+        <td class="has-text-centered">
+            <button id=${category.id} class="button is-danger is-outlined icon is-small btnDeleteCategory">
+            <i class="fas fa-times"></i>
+            </button>
+        </td>
+        </tr>
+        `
+    }
+}
+
+addCategory(categoryArr);
+
+/* Functions */
+
+
+/* Events */
+
+

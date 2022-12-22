@@ -303,7 +303,7 @@
               <label class="label" for="newCategoryName">Name</label>
               <div class="field is-grouped">
               <p class="control is-expanded">
-              <input value="" class="input" type="text" placeholder="Write new category">
+              <input id="inpNewCategory" value="" class="input" type="text" placeholder="Write new category">
               </p>
               <p class="control">
               <button id="addCategory" class="button is-primary">
@@ -321,115 +321,8 @@
                     <th class="has-text-centered">Delete</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td class="is-size-6 mt-3">Food</td>
-                    <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small btnEditCategory">
-                          <span class="icon is-small">
-                          <i class="fa-solid fa-pencil"></i>
-                        </span>
-                      </button>
-                    </td>
-                    <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
-                          <span class="icon is-small">
-                          <i class="fas fa-times"></i>
-                        </span>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="is-size-6 mt-3">Essential services</td>
-                    <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small btnEditCategory">
-                          <span class="icon is-small">
-                          <i class="fa-solid fa-pencil"></i>
-                        </span>
-                      </button>
-                    </td>
-                    <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
-                          <span class="icon is-small">
-                          <i class="fas fa-times"></i>
-                        </span>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="is-size-6 mt-3">Going out</td>
-                    <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small btnEditCategory">
-                          <span class="icon is-small">
-                          <i class="fa-solid fa-pencil"></i>
-                        </span>
-                      </button>
-                    </td>
-                    <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
-                          <span class="icon is-small">
-                          <i class="fas fa-times"></i>
-                        </span>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="is-size-6 mt-3">Education</td>
-                    <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small btnEditCategory">
-                          <span class="icon is-small">
-                          <i class="fa-solid fa-pencil"></i>
-                          </span>
-                      </button>
-                    </td>
-                    <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
-                          <span class="icon is-small">
-                          <i class="fas fa-times"></i>
-                        </span>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="is-size-6 mt-3">Transport</td>
-                    <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small btnEditCategory">
-                        <span class="icon is-small">
-                        <i class="fa-solid fa-pencil"></i>
-                        </span>
-                      </button>
-                    </td>
-                    <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
-                        <span class="icon is-small">
-                        <i class="fas fa-times"></i>
-                        </span>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td class="is-size-6 mt-3">Job</td>
-                    <td class="has-text-centered">
-                      <button class="button is-success is-outlined icon is-small btnEditCategory">
-                        <span class="icon is-small">
-                        <i class="fa-solid fa-pencil"></i>
-                        </span>
-                      </button>                    
-                    </td>
-                    <td class="has-text-centered">
-                      <button class="button is-danger is-outlined icon is-small btnDeleteCategory">
-                        <span class="icon is-small">
-                        <i class="fas fa-times"></i>
-                        </span>
-                      </button>
-                    </td>
-                  </tr>
-
+                <tbody id="tBodyNewCategory">
+                  <!-- Added with js -->
                 </tbody>
 
               </table>
