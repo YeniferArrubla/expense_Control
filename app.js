@@ -95,56 +95,60 @@ $btnNewOp.addEventListener('click', openNewOp);
 $btnCloseModalNewOp.addEventListener('click', closeModalNop);
 
 /* Categories Section */
-let body = document.body;
+
 /* Get Elements */
+
 const $inpNewCategory = $('#inpNewCategory');
 const $tBodyNewCategory = $('#tBodyNewCategory');
+
 /* Btns */
+
 const $btnAddCategory = $('#addCategory');
 const $btnEditCategory = $$('.btnEditCategory');
 const $btnDeleteCategory = $$('.btnDeleteCategory');
 
 /* Array */
 
-const categoryArr = [
+let categoryArr = [
     {
-        id:1,
-        category: 'Food'
+        categoryName: 'Food'
     },
+
     {
-        id:2,
-        category: 'Essential services'
+        categoryName: 'Essential services'
     },
+
     {
-        id:3,
-        category: 'Going out'
+        categoryName: 'Going out'
     },
+
     {
-        id:4,
-        category: 'Education'
+        categoryName: 'Education'
     },
+
     {
-        id:5,
-        category: 'Transport'
+        categoryName: 'Transport'
     },
+
     {
-        id:6,
-        category: 'Job'
+        categoryName: 'Job'
     }
 ];
+
+/* Functions */
 
 const addCategory = (categoryArr) =>{
     for(let category of categoryArr) {
         $tBodyNewCategory.innerHTML += `
         <tr>
-        <td class="is-size-6 mt-3">${category.category}</td>
+        <td class="is-size-6 mt-3">${category.categoryName}</td>
         <td class="has-text-centered">
-            <button id=${category.id} class="button is-success is-outlined icon is-small btnEditCategory">
+            <button id=${category.categoryName} class="button is-success is-outlined icon is-small btnEditCategory">
             <i class="fa-solid fa-pencil"></i>
             </button>
         </td>
         <td class="has-text-centered">
-            <button id=${category.id} class="button is-danger is-outlined icon is-small btnDeleteCategory">
+            <button id=${category.categoryName} class="button is-danger is-outlined icon is-small btnDeleteCategory">
             <i class="fas fa-times"></i>
             </button>
         </td>
@@ -152,12 +156,19 @@ const addCategory = (categoryArr) =>{
         `
     }
 }
-
 addCategory(categoryArr);
 
-/* Functions */
+let newArr = [...categoryArr]
 
+const addNewCat = () => {
+    newArr = []
+    let newCatObj = {
+    categoryName:$inpNewCategory.value
+    }
+    newArr.push(newCatObj)
+    addCategory(newArr)
+}
 
 /* Events */
 
-
+$btnAddCategory.addEventListener('click', addNewCat)
