@@ -1,3 +1,4 @@
+/* Useful functions */
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
@@ -50,6 +51,7 @@ $btnReports.addEventListener('click', openReportSec);
 
 $btnBalance.addEventListener('click', openBalanceSec);
 
+
 /* Balance view */
 
 /* Get Elements */
@@ -100,16 +102,18 @@ $btnCloseModalNewOp.addEventListener('click', closeModalNop);
 
 const $inpNewCategory = $('#inpNewCategory');
 const $tBodyNewCategory = $('#tBodyNewCategory');
+const $modalEditCategory = $('#modalEditCategory');
+const $inpChangeCatName = $('#inpChangeCatName')
 
 /* Btns */
 
 const $btnAddCategory = $('#addCategory');
-const $btnEditCategory = $$('.btnEditCategory');
-const $btnDeleteCategory = $$('.btnDeleteCategory');
+const $btnCancelEditCategory = $('#btnCancelEditCategory')
+
 
 /* Array */
 
-let categoryArr = [
+let categories = [
     {
         categoryName: 'Food'
     },
@@ -137,38 +141,66 @@ let categoryArr = [
 
 /* Functions */
 
-const addCategory = (categoryArr) =>{
-    for(let category of categoryArr) {
+const showCategories = () =>{
+    for(let category of categories) {
         $tBodyNewCategory.innerHTML += `
         <tr>
         <td class="is-size-6 mt-3">${category.categoryName}</td>
         <td class="has-text-centered">
-            <button id=${category.categoryName} class="button is-success is-outlined icon is-small btnEditCategory">
-            <i class="fa-solid fa-pencil"></i>
+            <button id=${category.categoryName} class="button btnEdit is-success is-outlined icon is-small">
+            ✓
             </button>
         </td>
         <td class="has-text-centered">
-            <button id=${category.categoryName} class="button is-danger is-outlined icon is-small btnDeleteCategory">
-            <i class="fas fa-times"></i>
+            <button id=${category.categoryName} class="button btnDelete is-danger is-outlined icon is-small btnDeleteCategory">
+            ✕
             </button>
         </td>
         </tr>
         `
     }
 }
-addCategory(categoryArr);
 
-let newArr = [...categoryArr]
+/* Local Storage Functions */
+const setItemLocal = () => localStorage.setItem('categories', JSON.stringify(categories));
+
+const parsedCat = () => JSON.parse(localStorage.getItem('categories'));
+showCategories(categories)
 
 const addNewCat = () => {
-    newArr = []
-    let newCatObj = {
-    categoryName:$inpNewCategory.value
-    }
-    newArr.push(newCatObj)
-    addCategory(newArr)
+    let newObjArr = {categoryName: ''}
+    newObjArr.categoryName = $inpNewCategory.value
+    categories.push(newObjArr)
+    setItemLocal()
+    showCategories()
 }
+
+console.log(categories)
+
+const $$buttonEdit = $$('.btnEdit')
+for(const button of $$buttonEdit) {
+    button.addEventListener('click', (e) => {
+        $modalEditCategory.classList.remove('is-hidden')   
+        $inpChangeCatName.value = `${e.target.id}`
+    })
+}
+
+const $$buttonDelete = $$('.btnDelete')
+for(const button of $$buttonDelete) {
+    button.addEventListener('click', (e) =>
+    console.log('cat', e.target.id))
+}
+
+const deleteCategory = () => {
+    $inpChangeCatName.value 
+}
+
+const closeModalEditCatName = () =>{
+    $modalEditCategory.classList.add('is-hidden')
+}
+
 
 /* Events */
 
-$btnAddCategory.addEventListener('click', addNewCat)
+$btnAddCategory.addEventListener('click', addNewCat);
+$btnCancelEditCategory.addEventListener('click', closeModalEditCatName)
