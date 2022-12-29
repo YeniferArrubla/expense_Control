@@ -52,7 +52,7 @@ $btnReports.addEventListener('click', openReportSec);
 $btnBalance.addEventListener('click', openBalanceSec);
 
 
-/* Balance view */
+/* --------  Balance view  ----------- */
 
 /* Get Elements */
 const $filCont = $('#filterContainer');
@@ -62,15 +62,22 @@ const $opTable =  $('#operationsTable');
 const $tableBodyOp = $('#tBodyOperations');
 const $editOp = $('#editOperation');
 
-
 /* btn */
 const $btnHideFil = $('#btnHideFilters');
 const $btnNewOp = $('#newOperation');
-const $btnCloseModalNewOp = $('#closeModalNewOp');
-const $btnAddOp = $('#addOperation');
-const $btnCancelAddOp = $('#addOperation');
 const $btnConfEditOp = $('#confirmEditOperation');
 const $btnCancelEditOp = $('#cancelEditOperation');
+
+/* Results table */
+const $gainResult = $('#gainBalance');
+const $spendResult = $('#spendBalance');
+const $totalBalance = $('#totalBalance');
+
+/* Filters selects */
+const typeSelect = $('#typeSelec');
+const categorySelect = $('#categorySelect');
+const filterDate = $('#filterDate');
+const sortBySelect = $('#sortBySelect');
 
 /* Functions */
 
@@ -87,16 +94,41 @@ const openNewOp = () => {
    $newOpCont.classList.add('is-active')
 }
 
-const closeModalNop = () => {
-    $newOpCont.classList.remove('is-active')
-}
 /* Events */
 
 $btnHideFil.addEventListener('click', hideFilters);
 $btnNewOp.addEventListener('click', openNewOp);
-$btnCloseModalNewOp.addEventListener('click', closeModalNop);
 
-/* Categories Section */
+
+
+
+/* ---- New Operation ----*/
+/* Elements */
+const $newOpDescription = $('#newOpDescription');
+const $newOpAmount = $('#newOpAmount');
+const $newOpType = $('#newOpType');
+const $newOpCategorySelect = $('#newOpCategorySelect');
+const $newOpDate = $('#newOpDate')
+
+/* btns */
+const $btnCloseModalNewOp = $('#closeModalNewOp');
+const $btnAddOp = $('#addOperation');
+const $btnCancelAddOp = $('#cancelAddOperation');
+
+/* Functions */
+
+const closeModalNop = () => {
+    $newOpCont.classList.remove('is-active')
+}
+
+/* Events */
+$btnCloseModalNewOp.addEventListener('click', closeModalNop);
+$btnCancelAddOp.addEventListener('click', closeModalNop);
+
+
+
+
+/* ----------- Categories Section ------------ */
 
 /* Get Elements */
 
@@ -177,7 +209,6 @@ const addNewCat = () => {
 console.log(categories)
 
 const $$buttonEdit = $$('.btnEdit')
-
 const editCatName = () => {
 for(const button of $$buttonEdit) {
     button.addEventListener('click', (e) => {
@@ -190,12 +221,10 @@ editCatName()
 
 const $$buttonDelete = $$('.btnDelete')
 for(const button of $$buttonDelete) {
-    button.addEventListener('click', (e) =>
-    console.log('cat', e.target.id))
-}
-
-const deleteCategory = () => {
-    $inpChangeCatName.value 
+    button.addEventListener('click', (e) => {
+       //todo: eliminar categoría del LS y vista 
+    }
+    )
 }
 
 const closeModalEditCatName = () =>{
