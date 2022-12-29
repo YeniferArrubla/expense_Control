@@ -110,10 +110,13 @@ const $inpChangeCatName = $('#inpChangeCatName')
 const $btnAddCategory = $('#addCategory');
 const $btnCancelEditCategory = $('#btnCancelEditCategory')
 
+/* Local Storage Functions */
+
+const parsedCategories = JSON.parse(localStorage.getItem('categories'));
 
 /* Array */
 
-let categories = [
+let categories = parsedCategories || [
     {
         categoryName: 'Food'
     },
@@ -142,6 +145,7 @@ let categories = [
 /* Functions */
 
 const showCategories = () =>{
+    $tBodyNewCategory.innerHTML = '';
     for(let category of categories) {
         $tBodyNewCategory.innerHTML += `
         <tr>
@@ -160,30 +164,29 @@ const showCategories = () =>{
         `
     }
 }
-
-/* Local Storage Functions */
-const setItemLocal = () => localStorage.setItem('categories', JSON.stringify(categories));
-
-const parsedCat = () => JSON.parse(localStorage.getItem('categories'));
 showCategories(categories)
 
 const addNewCat = () => {
     let newObjArr = {categoryName: ''}
     newObjArr.categoryName = $inpNewCategory.value
     categories.push(newObjArr)
-    setItemLocal()
+    localStorage.setItem('categories', JSON.stringify(categories));
     showCategories()
 }
 
 console.log(categories)
 
 const $$buttonEdit = $$('.btnEdit')
+
+const editCatName = () => {
 for(const button of $$buttonEdit) {
     button.addEventListener('click', (e) => {
         $modalEditCategory.classList.remove('is-hidden')   
         $inpChangeCatName.value = `${e.target.id}`
     })
 }
+}
+editCatName()
 
 const $$buttonDelete = $$('.btnDelete')
 for(const button of $$buttonDelete) {
